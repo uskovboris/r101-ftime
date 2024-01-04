@@ -11,8 +11,8 @@ const FERRIS: &str = r#"
   / '-----' \
 "#;
 
-const TIME_X_OFFSET: i32 = 5;
-const TIME_Y_OFFSET: i32 = 1;
+const TIME_X_OFFSET: u32 = 5;
+const TIME_Y_OFFSET: u32 = 1;
 
 fn main() {
     ctrlc::set_handler(move || {
@@ -51,6 +51,6 @@ fn hide_cursor() {
     print!("\x1b[?25l");
 }
 
-fn movexy(x: i32, y: i32) {
+fn movexy(x: u32, y: u32) {
     print!("\x1b[{y};{x}H");
 }
