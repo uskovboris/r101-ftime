@@ -16,7 +16,7 @@ const TIME_Y_OFFSET: u32 = 1;
 
 fn main() {
     ctrlc::set_handler(move || {
-        print!("{}", " ".default_color().on_default_color());
+        clear();
         process::exit(0)
     })
     .expect("Error setting Ctrl-C handler");
