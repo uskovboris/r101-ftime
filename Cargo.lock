@@ -87,6 +87,7 @@ dependencies = [
  "chrono",
  "ctrlc",
  "owo-colors",
+ "termination",
 ]
 
 [[package]]
@@ -189,6 +190,17 @@ dependencies = [
 
 [[package]]
 name = "syn"
+version = "1.0.109"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
+name = "syn"
 version = "2.0.43"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ee659fb5f3d355364e1f3e5bc10fb82068efbf824a1e9d1c9504244a6469ad53"
@@ -196,6 +208,26 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "termination"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4a61efcbb8bfb6df289d4ebb8e9065dc69f45cfef5391d584ff176968156e244"
+dependencies = [
+ "termination_attrib",
+]
+
+[[package]]
+name = "termination_attrib"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b68a5f1d9c0cdfec550ad26c32532f5b576e99583abc5c4a82395e89b725f4cf"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
 ]
 
 [[package]]
@@ -225,7 +257,7 @@ dependencies = [
  "once_cell",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.43",
  "wasm-bindgen-shared",
 ]
 
@@ -247,7 +279,7 @@ checksum = "f0eb82fcb7930ae6219a7ecfd55b217f5f0893484b7a13022ebb2b2bf20b5283"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.43",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]

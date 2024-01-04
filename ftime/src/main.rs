@@ -21,7 +21,7 @@ fn main() {
     // Remove program artefact from the screen and exit correct
     ctrlc::set_handler(move || {
         clear();
-        process::exit(0)
+        process::exit(termination::EXIT_SUCCESS);
     })
     .expect("Error setting Ctrl-C handler");
 
